@@ -1,0 +1,41 @@
+#Vue
+/app_vue/.DS_Store
+/app_vue/node_modules
+/app_vue/dist
+# local env files
+/app_vue/.env.local
+/app_vue/.env.*.local
+/app_vue/
+/app_vue/# Log files
+/app_vue/npm-debug.log*
+/app_vue/yarn-debug.log*
+/app_vue/yarn-error.log*
+# Editor directories and files
+/app_vue/.idea
+/app_vue/.vscode
+/app_vue/*.suo
+/app_vue/*.ntvs*
+/app_vue/*.njsproj
+/app_vue/*.sln
+/app_vue/*.sw?
+
+
+#React
+# dependencies
+/app_react/node_modules
+/app_react/.pnp
+/app_react/.pnp.js
+# testing
+/app_react/coverage
+# production
+/app_react/build
+# misc
+/app_react/.DS_Store
+/app_react/.env.local
+/app_react/.env.development.local
+/app_react/.env.test.local
+/app_react/.env.production.local
+/app_react/npm-debug.log*
+/app_react/yarn-debug.log*
+/app_react/yarn-error.log*
+
