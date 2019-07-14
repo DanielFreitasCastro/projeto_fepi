@@ -1,0 +1,27 @@
+#home_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home_content .home_form_container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #bcc8ff;
+    padding: 30px;
+}
+
+#home_content .home_form_container form {
+    text-align: center;
+}
+
+#home_content .home_form_container p {
+    margin-bottom: 15px;
+}
+
+#home_content .home_form_container input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+}

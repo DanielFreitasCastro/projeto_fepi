@@ -1,0 +1,27 @@
+.item_list {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cecece;
+}
+
+.item_list .item_list_container {
+    display: flex;
+    padding: 10px;
+}
+
+.item_list .item_list_container img {
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.item_list .item_list_container .item_list_container_texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item_list .item_list_container .item_list_container_texts h3 {
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
