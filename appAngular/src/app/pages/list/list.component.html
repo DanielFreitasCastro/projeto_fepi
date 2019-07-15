@@ -1,0 +1,24 @@
+<app-header title="Lista"></app-header>
+<div id="list_content" class="content">
+    <div *ngIf="!list">Carregando...</div>
+
+    <div *ngIf="list && !list.length">
+        <h2>Nenhum usuário encontrado!</h2>
+    </div>
+
+    <div *ngIf="list && list.length">
+        <h1>Itens encontrados:</h1>
+        <ul>
+            <li *ngFor="let item of list" class="item_list">
+                <div class="item_list_container">
+                    <img [src]="item.avatar_url" alt="Avatar" />
+                    <div class="item_list_container_texts">
+                        <h3>{{item.login}}</h3>
+                        <a [href]="item.html_url" target="_blank" rel="noopener noreferrer">{{item.html_url}}</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>

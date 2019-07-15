@@ -1,0 +1,10 @@
+<app-header title="Home"></app-header>
+<div id="home_content" class="content">
+    <div class="home_form_container">
+        <p>Informe um termo:</p>
+        <form #formHome="ngForm" (ngSubmit)="onFormSubmit(formHome)">
+            <input type="text" id="input_term" name="term" [(ngModel)]="term" />
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+</div>
