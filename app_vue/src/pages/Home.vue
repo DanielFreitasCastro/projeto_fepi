@@ -6,7 +6,7 @@
         <p>Informe um termo:</p>
         <form @submit.prevent="onSubmitForm">
           <input type="text" id="input_term" v-model="term" name="term" />
-          <button type="submit">Pesquisar</button>
+          <button type="submit" ref="myBtn">Pesquisar</button>
         </form>
       </div>
     </div>
@@ -32,6 +32,15 @@ export default {
       }
       this.$router.push({ path: `/lista/${this.term}` });
     }
+  },
+  created: function() {
+    setTimeout(() => {
+      this.term = "teste";
+      setTimeout(() => {
+        const elem = this.$refs.myBtn;
+        elem.click();
+      }, 2000);
+    }, 2000);
   }
 };
 </script>

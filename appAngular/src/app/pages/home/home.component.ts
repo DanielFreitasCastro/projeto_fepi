@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,22 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild("mybtn", null) button: ElementRef;
   term: string = "";
 
   constructor(private router: Router) { }
 
   ngOnInit() { }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.term = "teste";
+      setTimeout(() => {
+        const elem = this.button.nativeElement;
+        elem.click();
+      }, 2000);
+    }, 2000);
+  }
 
   onFormSubmit(form) {
     if (!this.term.length) {

@@ -9,6 +9,15 @@ class Home extends Component {
         term: ''
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ term: 'teste' })
+            setTimeout(() => {
+                this.button.click();
+            }, 2000);
+        }, 2000);
+    }
+
     async _onFormSubmit(evt) {
         evt.preventDefault();
         const { term } = this.state;
@@ -32,7 +41,7 @@ class Home extends Component {
                             <input type="text" id="input_term" value={term} onChange={(evt) => {
                                 this.setState({ term: evt.target.value });
                             }} />
-                            <button type="submit">Pesquisar</button>
+                            <button ref={ref => this.button = ref} type="submit">Pesquisar</button>
                         </form>
                     </div>
                 </div>
